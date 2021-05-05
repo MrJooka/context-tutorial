@@ -1,5 +1,16 @@
+import ColorBox from "./components/ColorBox";
+import SelectColors from "./components/SelectColors";
+import { ColorProvider } from "./contexts/color";
+
 function App() {
-  return <div className="App">Hello React</div>;
+  return (
+    <ColorProvider>
+      <div>
+        <SelectColors />
+        <ColorBox />
+      </div>
+    </ColorProvider>
+  );
 }
 
 export default App;
